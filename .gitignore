@@ -9,3 +9,5 @@ __pycache__
 # Python package files
 build
 *.egg-info
+.vscode
+rust/target

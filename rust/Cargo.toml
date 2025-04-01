@@ -1,0 +1,13 @@
+[package]
+name = "mdsthin"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bitfield = "0.19"
+num = "0.4"
+num_enum = "0.7"
+ndarray = "0.16"
+phf = { version = "0.10", features = ["macros"] }
+serde = "1.0"
+
