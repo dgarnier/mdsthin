@@ -822,6 +822,9 @@ class TreeNode(_NCI):
     def dim_of(self):
         return self._conn.get(f'dim_of({self.fullpath})')
 
+    def error_of(self):
+        return self._conn.get(f'error_of({self.fullpath})')
+
 class classmethodX(object):
     def __get__(self, inst, cls):
         if inst is None:
