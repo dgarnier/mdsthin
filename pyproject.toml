@@ -1,7 +1,7 @@
 [project]
 name = "mdsthin"
 description = "MDSplus Thin-Client implemented in pure python"
-version = "1.6.2"
+version = "1.6.3"
 license = {file = "LICENSE"}
 readme = "README.md"
 authors = [

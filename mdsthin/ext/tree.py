@@ -696,6 +696,7 @@ class TreeNode(_NCI):
             if name[0] == '_':
                 name = '\\' + name[1 : ]
             return self.getNode(name)
+        raise AttributeError(self, name)
 
     def getNode(self, path):
         if not path.startswith('\\'):
@@ -821,9 +822,20 @@ class TreeNode(_NCI):
 
     def dim_of(self):
         return self._conn.get(f'dim_of({self.fullpath})')
+    
+    def units_of(self):
+        return str(self._conn.get(f'units_of({self.fullpath})'))
+    
+    @property
+    def units(self):
+        return self.units_of()
 
     def error_of(self):
         return self._conn.get(f'error_of({self.fullpath})')
+    
+    @property
+    def error(self):
+        return self.error_of()
 
 class classmethodX(object):
     def __get__(self, inst, cls):
