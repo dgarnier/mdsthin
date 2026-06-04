@@ -470,14 +470,18 @@ class _NCI:
     @property
     def time_inserted(self):
         return self.getTimeInserted()
-    
+
+
+    @property
+    def usage(self):
+        return str(self._getNci('USAGE_STR'))[10:]
+
+    def getUsage(self):
+        return self.usage
 
     @property
     def usage_str(self):
         return self._getNci('USAGE_STR')
-
-    def getUsageStr(self):
-        return self.usage_str
 
 
     @property
