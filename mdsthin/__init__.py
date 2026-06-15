@@ -23,7 +23,29 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-from .connection import *
-from .descriptors import *
+from .connection import Connection, GetMany, PutMany
+
+from .descriptors import (
+    Numeric, Descriptor,
+    DescriptorS,
+        String, Ident, TreeNID, TreePath,
+        UInt8, UInt16, UInt32, UInt64,
+        Int8, Int16, Int32, Int64,
+        Float32, Float64,
+    DescriptorA,
+        StringArray,
+        UInt8Array, UInt16Array, UInt32Array, UInt64Array,
+        Int8Array, Int16Array, Int32Array, Int64Array,
+        Float32Array, Float64Array,
+    DescriptorAPD,
+        List, Tuple, Dictionary,
+    DescriptorR,
+        Signal, Dimension, Window, Slope, Function, Conglom, Range,
+        Action, Dispatch, Program, Routine, Procedure, Method,
+        Dependency, Condition, WithUnits, Call, WithError, Opaque,
+)
+
 from .exceptions import *
 from .functions import *
+
+from . import version

@@ -141,7 +141,7 @@ def usage_lookup(name):
 
     return table[name.upper()]
 
-def usage_to_string(usage: usage_t | int) -> str:
+def usage_to_string(usage) -> str:
     VALUES = {
         TreeUSAGE_ANY: 'TreeUSAGE_ANY',
         TreeUSAGE_STRUCTURE: 'TreeUSAGE_STRUCTURE',
@@ -169,5 +169,5 @@ def usage_to_string(usage: usage_t | int) -> str:
 
     return f'TreeUSAGE_UNKNOWN({usage})'
 
-def usage_to_name(usage: usage_t | int) -> str:
+def usage_to_name(usage) -> str:
     return usage_to_string(usage).removeprefix('TreeUSAGE_')

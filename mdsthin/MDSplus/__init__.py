@@ -30,16 +30,16 @@
 #
 
 from ..connection import Connection, GetMany, PutMany
-from ..ext import Tree, TreeNode, setDefaultConnection, getDefaultConnection
 
-from ..descriptors import String, StringArray
-from ..descriptors import Int8, Int16, Int32, Int64, Int8Array, Int16Array, Int32Array, Int64Array
-from ..descriptors import List, Dictionary
-from ..descriptors import Signal, Dimension, Window, Slope, Function, Conglom, Range, Action, Dispatch
-from ..descriptors import Program, Routine, Procedure, Method, Dependency, Condition, WithUnits, Call, WithError
+from ..descriptors import (
+    String, StringArray,
+    Int8, Int16, Int32, Int64, Int8Array, Int16Array, Int32Array, Int64Array,
+    List, Dictionary,
+    Signal, Dimension, Window, Slope, Function, Conglom, Range, Action, Dispatch,
+    Program, Routine, Procedure, Method, Dependency, Condition, WithUnits, Call, WithError
+)
+
 from ..functions import *
-
-# Compatability
 
 from ..descriptors import Descriptor as Data
 from ..descriptors import Descriptor as DescriptorNULL
@@ -56,6 +56,11 @@ from ..descriptors import UInt32Array as Uint32Array
 from ..descriptors import UInt64Array as Uint64Array
 
 from .. import exceptions as mdsExceptions
+
+from ..ext import (
+    setDefaultConnection, getDefaultConnection,
+    Tree, TreeNode,
+)
 
 del Connection.tcl
 del Connection.tdic
